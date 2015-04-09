@@ -1,0 +1,452 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html class="no-js ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]><html class="no-js ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]><html class="no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html><!--<![endif]-->
+<head>
+	<meta charset="gbk" />
+	<title><%= projectName %> - index demo</title>
+    <link rel="stylesheet" href="http://a.tbcdn.cn/??p/global/1.0/global-min.css" />
+    <link rel="stylesheet" href="http://g.tbcdn.cn/??trip/pi/1.0/base/global-min.css,trip/pi/1.0/header/chn-header-min.css,trip/pi/1.0/header/flow-header-min.css"/>
+    <script src="http://a.tbcdn.cn/s/kissy/1.3.0/seed-min.js"></script>
+    <script src="http://g.tbcdn.cn/tb/global/1.0.7/global-min.js?t=20130802"></script>
+    <!--[if lt IE 9]><script src="http://a.tbcdn.cn/app/dp/s/html5/js/??html5shiv-min.js"></script><![endif]-->
+	<link rel="stylesheet" href="index.css"/>
+	<script src="http://g.tbcdn.cn/kissy/k/1.3.0/seed-min.js"></script>
+	<script>
+		if (KISSY.Config.debug) {
+			var srcPath = "./";
+			KISSY.config({
+				packages:[
+					{
+						name:"<%= packageName %>",
+						path:srcPath,
+						charset:"utf-8",
+						ignorePackageNameInUri:true,
+						debug:true
+					}
+				]
+			});
+		} else {
+			KISSY.config({
+				packages: [
+					{
+						name: '<%= packageName %>',
+						// ·¢²¼µ½ÏßÉÏÊ±ÐèÒª´øÉÏ°æ±¾ºÅ
+						path: 'http://g.tbcdn.cn/<%= groupName %>/<%= packageName %>/x.y.z',
+						ignorePackageNameInUri: true
+					}
+				]
+			});
+		}
+	</script>
+</head>
+<body>
+
+<div id="site-nav">
+    <div id="site-nav-bd">
+        <div class="sitenav-mobile"><a
+                href=" http://www.taobao.com/m?spm=1.1000386.176505.4&amp;TBG=146112.176505.4">ÊÖ»ú°æ</a>
+        </div>
+        <p class="login-info">
+            <script>TB.Global.writeLoginInfo({"memberServer": "", "outmemServer": "", "loginServer": "", redirectUrl: "", logoutUrl: ""});</script>
+        </p>
+
+        <ul class="quick-menu">
+            <li class="home"><a href="http://www.taobao.com/" target="_top">ÌÔ±¦ÍøÊ×Ò³</a>
+            </li>
+            <li class="menu-item">
+                <div class="menu">
+                    <a class="menu-hd" style="width:36px;"
+                       href="http://guang.taobao.com" target="_top"
+                       rel="nofollow">ÎÒÒª¹ä<b></b></a>
+
+                    <div class="menu-bd"
+                         style="width:68px;height:94px;line-height:1.7;">
+                        <div class="menu-bd-panel" style="padding:8px 10px;">
+                            <div>
+                                <a href="http://dongtai.taobao.com/hub/new_arrival.htm?scm=1046.1.7.1"
+                                   target="_top" rel="nofollow">¹äÉÏÐÂ</a>
+                                <a href="http://dongtai.taobao.com/hub/promotion.htm?scm=1046.1.8.1"
+                                   target="_top" rel="nofollow">¹äÓÅ»Ý</a><br/>
+                                <a href="http://www.taobao.com/go/act/sns/taoban_download1.php?tracelog=tbshouye"
+                                   target="_top" rel="nofollow">ÓÃÊÖ»ú¹ä</a>
+                                <a href="http://list.taobao.com/browse/cat-0.htm?taobao_from=6"
+                                   target="_top" rel="nofollow">ÉÌÆ··ÖÀà</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="mytaobao menu-item">
+                <div class="menu">
+                    <a class="menu-hd" href="http://i.taobao.com/my_taobao.htm"
+                       target="_top" rel="nofollow">ÎÒµÄÌÔ±¦<b></b></a>
+
+                    <div class="menu-bd" style="height: 75px;width:100px">
+                        <div class="menu-bd-panel" id="myTaobaoPanel">
+                            <div>
+                                <a href="http://trade.taobao.com/trade/itemlist/list_bought_items.htm"
+                                   target="_top" rel="nofollow">ÒÑÂòµ½µÄ±¦±´</a>
+                            </div>
+                            <div>
+                                <a href="http://dongtai.taobao.com/index.htm?scm=1046.1.1.1"
+                                   target="_top" rel="nofollow">µêÆÌ¶¯Ì¬</a>
+                            </div>
+                            <div>
+                                <a href="http://i.taobao.com/feed/friend_feed.htm?tracelog=taobaoindexrsidenewfeed"
+                                   target="_top" rel="nofollow">ºÃÓÑ¶¯Ì¬</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <style>
+                #site-nav .seller-center .menu-hd {
+                    width: 48px;
+                }
+
+                #site-nav .seller-center .menu-bd {
+                    width: 94px;
+                    line-height: 1.7;
+                }
+
+                #site-nav .seller-center .menu-bd-panel {
+                    padding: 8px 10px;
+                }
+            </style>
+            <li class="seller-center menu-item">
+                <div class="menu">
+                    <a class="menu-hd"
+                       href="http://mai.taobao.com/seller_admin.htm"
+                       target="_top" rel="nofollow">Âô¼ÒÖÐÐÄ<b></b></a>
+
+                    <div class="menu-bd">
+                        <div class="menu-bd-panel">
+                            <div>
+                                <a href="http://trade.taobao.com/trade/itemlist/list_sold_items.htm"
+                                   target="_top" rel="nofollow">ÒÑÂô³öµÄ±¦±´</a>
+                                <a href="http://sell.taobao.com/auction/goods/goods_on_sale.htm"
+                                   target="_top" rel="nofollow">³öÊÛÖÐµÄ±¦±´</a>
+                                <a href="http://fuwu.taobao.com/?tracelog=tbdd"
+                                   target="_top" rel="nofollow">Âô¼Ò·þÎñÊÐ³¡</a>
+                                <a href="http://learn.taobao.com/user/xueyuanRedirect.htm?target=http://www.alibado.com"
+                                   target="_top" rel="nofollow">Âô¼ÒÅàÑµÖÐÐÄ</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="service">
+                <a href="http://service.taobao.com/support/main/service_center.htm"
+                   target="_top" rel="nofollow">ÁªÏµ¿Í·þ</a>
+            </li>
+            <li class="cart">
+                <a href="http://cart.taobao.com/my_cart.htm" target="_top"
+                   rel="nofollow">
+                    <s>
+                    </s>¹ºÎï³µ
+                </a>
+                <b class="leftline"></b>
+                <b class="rightline"></b>
+            </li>
+            <li class="favorite menu-item">
+                <div class="menu">
+                    <a class="menu-hd" style="width:36px;"
+                       href="http://favorite.taobao.com/collect_list.htm?itemtype=0"
+                       target="_top" rel="nofollow">ÊÕ²Ø¼Ð<b></b></a>
+
+                    <div class="menu-bd"
+                         style="width:82px;height:57px;line-height:1.7;">
+                        <div class="menu-bd-panel" style="padding:8px 10px;">
+                            <div>
+                                <a href="http://favorite.taobao.com/collect_list.htm?itemtype=1"
+                                   target="_top" rel="nofollow">ÊÕ²ØµÄ±¦±´</a>
+                                <a href="http://favorite.taobao.com/collect_list.htm?itemtype=0"
+                                   target="_top" rel="nofollow">ÊÕ²ØµÄµêÆÌ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="services menu-item last">
+                <div id="J_Service" class="menu">
+                    <a class="menu-hd"
+                       href="http://www.taobao.com/sitemap.php?id=sitemap2"
+                       target="_top">ÍøÕ¾µ¼º½<b></b></a>
+
+                    <div id="J_ServicesContainer" class="menu-bd"
+                         style="width:202px;width:210px\9;_width:202px;height:337px;"></div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!-- end vmc 3.1 -->
+<!-- trip-header vmc begin-->
+<header class="header" id="J_TripPageHeader">
+    <div class="header-top">
+        <div class="layout-w">
+            <div class="header-tit">
+                <div class="header-tit-logo" data-spm="a1z2x">
+                    <a href="http://trip.taobao.com" target="_self">ÌÔ±¦ÂÃÐÐ</a>
+                </div>
+            </div>
+            <div class="header-menu">
+                <div class="header-menu-item header-menu-order J_HeaderDropDown">
+                    <div class="header-menu-item-in">
+                        <s class="header-menu-icon"></s>
+                        <a href="http://jipiao.trip.taobao.com/order_manager.htm">ÎÒµÄÂÃÐÐ¶©µ¥</a>
+                        <s class="header-menu-arr"></s>
+                    </div>
+                    <div class="header-submenu J_HeaderDropDownSubMenu"
+                         style="display: none">
+                        <div class="header-submenu-item"><a
+                                href="http://jipiao.trip.taobao.com/order_manager.htm">»úÆ±¶©µ¥</a>
+                        </div>
+                        <div class="header-submenu-item"><a
+                                href="http://jiudian.trip.taobao.com/hotel/hotel_order_manager.htm">¾Æµê¶©µ¥</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-menu-item header-menu-shops">
+                    <div class="header-menu-item-in">
+                        <s class="header-menu-icon"></s>
+                        <a href="http://zhaoshang.trip.taobao.com/">ÉÌ¼ÒÈë×¤</a>
+                    </div>
+                </div>
+                <div class="header-menu-item header-menu-help">
+                    <div class="header-menu-item-in">
+                        <s class="header-menu-icon"></s>
+                        <a href="http://service.taobao.com/support/11867.htm?spm=0.0.0.41.o1wZtn">°ïÖúÖÐÐÄ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="J_HeaderBrand" style="height:0;overflow:hidden;position:relative;">
+        <div class="header-brand">
+            <div class="layout-w">
+                <h2>ÌÔ±¦ÂÃÐÐ<span class="highlight">100%</span>Æ·ÖÊ±£ÕÏ</h2>
+                <dl>
+                    <dt class="brand-flight">»úÆ±</dt>
+                    <dd>
+                        <div class="brand-item"><s></s><em class="highlight">100%</em>º½Ð­ÈÏÖ¤
+                        </div>
+                        <div class="brand-item"><s></s><em class="highlight">100%</em>³öÆ±±£Ö¤
+                        </div>
+                        <div class="brand-item"><s></s><em>24</em>Ð¡Ê±ÄÚÍË¿î</div>
+                    </dd>
+                </dl>
+                <dl class="brand-hotel">
+                    <dt>¾Æµê</dt>
+                    <dd>
+                        <div class="brand-item"><s></s><em>4000</em>¼Òº£Á¿¾Æµê</div>
+                        <div class="brand-item brand-item-last"><s></s>½üÍò¼ÒÌØÉ«¿ÍÕ»
+                        </div>
+                        <div class="brand-item"><s></s><em class="highlight">100%</em>Ïû±£±£ÕÏ
+                        </div>
+                        <div class="brand-item brand-item-last"><s></s>Èë×¡ºóÕæÊµµãÆÀ
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <nav class="header-nav">
+        <div class="layout-w header-nav-in">
+            <ul class="layout-w">
+                <li class="header-nav-item header-nav-item-selected"><span
+                        class="header-nav-interior"><a
+                        href="http://trip.taobao.com"
+                        target="_self">Ê×Ò³</a></span></li>
+                <li class="header-nav-item "><span
+                        class="header-nav-interior"><a
+                        href="http://trip.taobao.com/jipiao"
+                        target="_self">»úÆ±</a></span></li>
+                <li class="header-nav-item "><span
+                        class="header-nav-interior"><a
+                        href="http://trip.taobao.com/qijian"
+                        target="_self">º½¿Õ¹«Ë¾</a></span></li>
+                <li class="header-nav-item "><span
+                        class="header-nav-interior"><a
+                        href="http://trip.taobao.com/jiudian"
+                        target="_self">¾Æµê</a></span></li>
+                <li class="header-nav-item "><span
+                        class="header-nav-interior"><a
+                        href="http://trip.taobao.com/kezhan"
+                        target="_self">¿ÍÕ»</a></span></li>
+                <li class="header-nav-item "><span
+                        class="header-nav-interior"><a
+                        href="http://trip.taobao.com/dujia"
+                        target="_self">ÂÃÓÎ¶È¼Ù</a></span></li>
+                <li class="header-nav-item "><span
+                        class="header-nav-interior"><a
+                        href="http://go.taobao.com/">ÂÃÐÐÉçÇø</a></span></li>
+                <li class="header-nav-item "><span
+                        class="header-nav-interior"><a
+                        href="http://trip.taobao.com/tuan/"
+                        target="_self">ÍÅ¹º</a></span></li>
+                <li class="header-nav-item "><span
+                        class="header-nav-interior"><a
+                        href="http://trip.taobao.com/mobile/?ad_id=&am_id=1301048151a679d80b29&cm_id=&pm_id="
+                        target="_self">ÊÖ»ú¿Í»§¶Ë</a></span></li>
+            </ul>
+            <div class="header-brand-btn" id="J_HeaderBrandBtn"></div>
+        </div>
+    </nav>
+</header>
+<!-- Á÷³ÌÒ³Í·
+<div id="trip-header-pg">
+    <div class="header-w">
+        <h1>
+            <a href="http://trip.taobao.com" title="ÌÔ±¦ÂÃÐÐÊ×Ò³" class="header-logo-link">ÌÔ±¦ÂÃÐÐ</a>
+            <s class="header-point"></s>
+            <strong class="header-logo-jipiao"><a href="http://jipiao.trip.taobao.com"
+                                                  title="¹úÄÚ»úÆ±Ê×Ò³">¹úÄÚ»úÆ±</a></strong></h1>
+    </div>
+</div>
+-->
+<script>KISSY.use('core',function(S){TB.Global.init();});</script>
+<!-- trip-header vmc end-->
+
+    <!--your html code-->
+    Content
+
+
+	<script>
+		KISSY.use('<%= packageName %>/index', function(S, <%= projectName %>) {
+			<%= projectName %>.init();
+		});	
+	</script>
+
+<!-- from vmcommon -->
+<div id="footer">
+	<!-- Ò³Î² begin -->
+    <style>
+    #footer{
+        padding-top:0;
+    }
+    .g_foot{
+      _width: 950px;
+      min-width:950px;
+      max-width:990px;
+      margin: 0 auto 0;
+      font: 12px/1.5 tahoma,arial,ËÎÌåb8b\4f53;
+      padding: 7px 0 9px;
+      color: #b0b0b0;
+      text-align: left !important;
+      position: relative;
+      clear:both;
+    }
+    .g_foot a{
+      margin: 0 4px;
+      color: #404040;
+      text-decoration:none;
+    }
+    .g_foot a:hover{
+      color: #F60;
+      text-decoration: underline;
+
+    }
+    .g_foot-ali{
+      margin-right: 100px;
+      padding-left: 0;
+      border-bottom: 1px solid #D3D3D3;
+      padding-bottom: 8px;
+    }
+    .g_foot-nohover{
+      cursor: default;
+    }
+    .g_foot-nohover:hover{
+      color:#3e3e3e !important;
+      text-decoration:none !important;
+    }
+    .g_foot-ali b {
+      margin: 0 4px;
+      color:#d3d3d3;
+      font-weight: normal;
+    }
+    .g_foot-nav{
+      margin-top: 8px;
+      line-height: 20px;
+    }
+    .g_foot-nav span{
+      margin-left: 50px;
+    }
+    .g_foot-toy{
+      position: absolute;
+      background: url(http://img01.taobaocdn.com/tps/i1/T1MMPaXkNjXXaXezbh-48-70.png) no-repeat;
+      _background: url(http://img01.taobaocdn.com/tps/i1/T1XgzaXX0kXXaXezbh-48-70.png) no-repeat;
+      width: 69px;
+      height: 100px;
+      display: block;
+      right: 0px;
+      top:0px;
+    }
+    /* IE9 only */
+    :root .g_foot-toy {
+        right:-20px\9;
+     }
+    .g_foot-line{
+      display: none;
+      position: absolute;
+      background: url(http://img01.taobaocdn.com/tps/i1/T1I_56Xl0wXXXXXXXX-104-1.png) no-repeat;
+      width: 104px;
+      height: 1px;
+      right: 45px;
+      top:33px;
+    }
+    </style>
+    <div class="g_foot">
+        <div class="g_foot-ali">
+            <a href="javascript:void(0)" target="_self" class="g_foot-nohover">°¢Àï°Í°Í¼¯ÍÅ</a> <b>|</b>
+            <a href="javascript:void(0)" target="_self" class="g_foot-nohover">°¢Àï°Í°ÍÍøÂç£º</a>
+            <a href="http://www.alibaba.com/">¹ú¼ÊÕ¾</a>
+            <a href="http://china.alibaba.com/">ÖÐÎÄÕ¾</a>
+            <a href="http://seller.aliexpress.com/">È«ÇòËÙÂôÍ¨</a> <b>|</b>
+            <a href="http://www.taobao.com/?id=shouye_taobao">ÌÔ±¦Íø</a>
+            <b>|</b>
+            <a href="http://www.tmall.com/">ÌìÃ¨</a>
+            <b>|</b>
+            <a href="http://www.etao.com/">Ò»ÌÔ</a>
+            <b>|</b>
+            <a href="http://ju.taobao.com/">¾Û»®Ëã</a>
+            <b>|</b>
+            <a href="http://www.aliyun.com/">°¢ÀïÔÆ</a>
+            <b>|</b>
+            <a href="http://www.yahoo.com.cn/">ÖÐ¹úÑÅ»¢</a>
+            <b>|</b>
+            <a href="http://www.alipay.com/">Ö§¸¶±¦</a>
+        </div>
+        <div class="g_foot-nav">
+            <a href="http://www.taobao.com/about/">¹ØÓÚÌÔ±¦</a>
+            <a href="http://www.taobao.com/about/partners.php">ºÏ×÷»ï°é</a>
+            <a href="http://pro.taobao.com/">ÓªÏúÖÐÐÄ</a>
+            <a href="http://service.taobao.com/support/main/service_center.htm">·þÎñÖÐÐÄ</a>
+            <a href="http://open.taobao.com/">¿ª·ÅÆ½Ì¨</a>
+            <a href="http://www.taobao.com/about/join.php">³ÏÕ÷Ó¢²Å</a>
+            <a href="http://www.taobao.com/about/contact.php">ÁªÏµÎÒÃÇ</a>
+            <a href="http://www.taobao.com/sitemap.php">ÍøÕ¾µØÍ¼</a>
+            <a href="http://www.taobao.com/about/copyright.php">°æÈ¨ËµÃ÷</a>
+            <span>&copy; 2013 Taobao.com °æÈ¨ËùÓÐ</span>
+        </div>
+        <span class="g_foot-toy"></span>
+        <span class="g_foot-line"></span>
+    </div>
+	<!-- Ò³Î² end -->
+    <div id="server-num">at221137.cm3</div>
+</div>
+<!-- end vmcommon -->
+
+</body>
+</html>
